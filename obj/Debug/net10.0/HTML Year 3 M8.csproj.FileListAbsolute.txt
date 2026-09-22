@@ -1,0 +1,14 @@
+C:\HTML Year 3 M8\bin\Debug\net10.0\HTML Year 3 M8.exe
+C:\HTML Year 3 M8\bin\Debug\net10.0\HTML Year 3 M8.deps.json
+C:\HTML Year 3 M8\bin\Debug\net10.0\HTML Year 3 M8.runtimeconfig.json
+C:\HTML Year 3 M8\bin\Debug\net10.0\HTML Year 3 M8.dll
+C:\HTML Year 3 M8\bin\Debug\net10.0\HTML Year 3 M8.pdb
+C:\HTML Year 3 M8\obj\Debug\net10.0\HTML Year 3 M8.GeneratedMSBuildEditorConfig.editorconfig
+C:\HTML Year 3 M8\obj\Debug\net10.0\HTML Year 3 M8.AssemblyInfoInputs.cache
+C:\HTML Year 3 M8\obj\Debug\net10.0\HTML Year 3 M8.AssemblyInfo.cs
+C:\HTML Year 3 M8\obj\Debug\net10.0\HTML Year 3 M8.csproj.CoreCompileInputs.cache
+C:\HTML Year 3 M8\obj\Debug\net10.0\HTML Year 3 M8.dll
+C:\HTML Year 3 M8\obj\Debug\net10.0\refint\HTML Year 3 M8.dll
+C:\HTML Year 3 M8\obj\Debug\net10.0\HTML Year 3 M8.pdb
+C:\HTML Year 3 M8\obj\Debug\net10.0\HTML Year 3 M8.genruntimeconfig.cache
+C:\HTML Year 3 M8\obj\Debug\net10.0\ref\HTML Year 3 M8.dll
