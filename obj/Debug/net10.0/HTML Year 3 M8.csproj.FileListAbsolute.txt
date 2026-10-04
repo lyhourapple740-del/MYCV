@@ -12,3 +12,4 @@ C:\HTML Year 3 M8\obj\Debug\net10.0\refint\HTML Year 3 M8.dll
 C:\HTML Year 3 M8\obj\Debug\net10.0\HTML Year 3 M8.pdb
 C:\HTML Year 3 M8\obj\Debug\net10.0\HTML Year 3 M8.genruntimeconfig.cache
 C:\HTML Year 3 M8\obj\Debug\net10.0\ref\HTML Year 3 M8.dll
+C:\HTML Year 3 M8\obj\Debug\net10.0\HTML Year 3 M8.sourcelink.json
