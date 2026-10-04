@@ -5,30 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV - SOUNG KIMLENG</title>
     <style>
+        :root {
+            --primary: #0f172a;
+            --accent: #059669;
+            --accent-light: #ecfdf5;
+            --text-main: #334155;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --bg-page: #f8fafc;
+            --bg-card: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
+            color: var(--text-main);
+            background-color: var(--bg-page);
+            margin: 0;
             padding: 40px 20px;
-            background-color: #f9f9f9;
+            -webkit-font-smoothing: antialiased;
         }
 
         .cv-container {
-            background-color: #ffffff;
-            padding: 40px;
-            border: 1px solid #ddd;
-            box-shadow: 0 0 10px rgba(0,0,0,0.05);
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: var(--bg-card);
+            padding: 48px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
         }
 
+        /* Header */
         header {
             display: flex;
+            align-items: center;
             justify-content: space-between;
-            align-items: flex-start;
-            border-bottom: 2px solid #eee;
-            padding-bottom: 20px;
-            margin-bottom: 20px;
+            gap: 24px;
+            padding-bottom: 28px;
+            border-bottom: 2px solid var(--border);
+            margin-bottom: 32px;
         }
 
         .header-text {
@@ -36,83 +56,192 @@
         }
 
         .header-text h1 {
-            margin: 0 0 5px 0;
-            font-size: 28px;
-            color: #111;
+            margin: 0 0 4px 0;
+            font-size: 32px;
+            letter-spacing: -0.02em;
+            color: var(--primary);
+            font-weight: 800;
             text-transform: uppercase;
         }
 
         .header-text h2 {
-            margin: 0 0 15px 0;
+            margin: 0 0 16px 0;
             font-size: 18px;
-            color: #4A7C59; 
-            font-weight: bold;
+            color: var(--accent);
+            font-weight: 600;
+            letter-spacing: 0.02em;
         }
 
         .contact-info {
-            font-size: 14px;
-            color: #555;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 6px 16px;
+            font-size: 13.5px;
+            color: var(--text-muted);
         }
 
         .contact-info p {
-            margin: 3px 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
         }
 
         .profile-img {
-            width: 130px;
-            height: 130px;
+            width: 120px;
+            height: 120px;
             object-fit: cover;
-            border-radius: 5px;
-            margin-left: 20px;
+            border-radius: 50%;
+            border: 3px solid var(--accent-light);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            flex-shrink: 0;
         }
 
+        /* Sections */
         section {
-            margin-bottom: 25px;
+            margin-bottom: 32px;
         }
 
         h3.section-title {
-            color: #4A7C59; 
-            font-size: 18px;
-            margin-bottom: 10px;
-            border-bottom: 1px solid #e2e2e2;
-            padding-bottom: 4px;
+            color: var(--primary);
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin: 0 0 16px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
 
-        .skills-list {
-            font-size: 14px;
-            color: #444;
+        h3.section-title::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background-color: var(--border);
+        }
+
+        .section-body {
+            font-size: 14.5px;
+            color: var(--text-main);
+        }
+
+        /* Experience & Education Items */
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 4px;
         }
 
         .item-title {
-            color: #0000B3; 
-            font-weight: bold;
-            font-size: 15px;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 15.5px;
             margin: 0;
         }
 
         .item-sub {
-            color: #666;
+            color: var(--accent);
+            font-weight: 600;
             font-size: 13px;
-            margin: 2px 0 8px 0;
+            margin: 0 0 10px 0;
         }
 
-        ul {
-            margin: 5px 0 10px 20px;
-            padding: 0;
+        .item-date {
+            color: var(--text-muted);
+            font-size: 13px;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+
+        ul.cv-list {
+            margin: 0 0 12px 0;
+            padding-left: 18px;
             font-size: 14px;
+            color: var(--text-main);
         }
 
-        li {
-            margin-bottom: 4px;
+        ul.cv-list li {
+            margin-bottom: 6px;
         }
 
+        /* Skills Badges */
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .skill-badge {
+            background-color: var(--bg-page);
+            border: 1px solid var(--border);
+            color: var(--primary);
+            padding: 5px 12px;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        .skill-badge.highlight {
+            background-color: var(--accent-light);
+            border-color: rgba(5, 150, 105, 0.2);
+            color: var(--accent);
+        }
+
+        .tech-stack {
+            margin-top: 10px;
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        .tech-stack strong {
+            color: var(--primary);
+        }
+
+        /* Footer */
         footer {
             margin-top: 40px;
-            padding-top: 15px;
-            border-top: 1px solid #eee;
-            text-align: left;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+            text-align: center;
             font-size: 12px;
-            color: #777;
+            color: var(--text-muted);
+        }
+
+        /* Print Optimization */
+        @media print {
+            body {
+                background-color: #fff;
+                padding: 0;
+            }
+            .cv-container {
+                box-shadow: none;
+                border: none;
+                padding: 0;
+                max-width: 100%;
+            }
+            footer {
+                display: none;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .cv-container {
+                padding: 24px;
+            }
+            header {
+                flex-direction: column-reverse;
+                align-items: flex-start;
+            }
+            .profile-img {
+                width: 90px;
+                height: 90px;
+            }
+            .item-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
         }
     </style>
 </head>
@@ -122,63 +251,77 @@
     <!-- Header Section -->
     <header>
         <div class="header-text">
-            <h1>SOUNG KIMLENG</h1>
-            <h2>Computer Science </h2>
+            <h1>Soung Kimleng</h1>
+            <h2>Computer Science Student</h2>
             <div class="contact-info">
-                <p>Stueng Mean Chey Commune, Mean Chey District, Phnom Penh, Cambodia</p>
-                <p>(+855) 090 987 695</p>
-                <p>soungkimleng56@gmail.com</p>
+                <p>📍 Stueng Mean Chey, Phnom Penh</p>
+                <p>📞 (+855) 090 987 695</p>
+                <p>✉️ soungkimleng56@gmail.com</p>
             </div>
         </div>
-        
-        <img alt="SOUNG KIMLENG" class="profile-img">
+        <img src="profile.jpg" alt="Soung Kimleng" class="profile-img">
     </header>
 
     <!-- About Me Section -->
     <section>
         <h3 class="section-title">About Me</h3>
-        <p style="font-size: 14px; margin: 0;">
-            I am a motivated and hardworking individual with strong communication and problem-solving skills. Eager to learn, adapt, and contribute to organizational success.
-        </p>
+        <div class="section-body">
+            <p style="margin: 0;">
+                Motivated Computer Science student with strong communication and analytical problem-solving skills. Eager to leverage foundational expertise in software engineering, web development, and hardware systems to contribute effectively to team deliverables and organizational growth.
+            </p>
+        </div>
     </section>
 
     <!-- Skills Section -->
     <section>
-        <h3 class="section-title">Skills</h3>
-        <p class="skills-list">
-            C Programming, C++ Programming, Web Development (HTML, CSS), JAVA Programming, , Khmer (Native), English (Intermediate)
-        </p>
+        <h3 class="section-title">Technical Skills</h3>
+        <div class="skills-grid">
+            <span class="skill-badge highlight">C / C++</span>
+            <span class="skill-badge highlight">Java</span>
+            <span class="skill-badge highlight">HTML5 & CSS3</span>
+            <span class="skill-badge">MySQL</span>
+            <span class="skill-badge">Hardware Logic</span>
+            <span class="skill-badge">Khmer (Native)</span>
+            <span class="skill-badge">English (Intermediate)</span>
+        </div>
     </section>
 
     <!-- Education Section -->
     <section>
         <h3 class="section-title">Education</h3>
-        <p class="item-title">Royal University of Phnom Penh (RUPP) - Bachelor of Computer Science</p>
-        <p class="item-sub">2024 to 2027 (Expected Graduation: 2027)</p>
-        <ul>
-            <li>Relevant Coursework: Data Structures & Algorithms, Database Management, Computer Architecture</li>
+        <div class="item-header">
+            <p class="item-title">Royal University of Phnom Penh (RUPP)</p>
+            <span class="item-date">2024 – 2027 (Expected)</span>
+        </div>
+        <p class="item-sub">Bachelor of Computer Science</p>
+        <ul class="cv-list">
+            <li><strong>Relevant Coursework:</strong> Data Structures & Algorithms, Database Management Systems, Computer Architecture.</li>
         </ul>
     </section>
 
     <!-- Experience / Academic Projects Section -->
     <section>
-        <h3 class="section-title">Experience</h3>
+        <h3 class="section-title">Experience & Projects</h3>
         
-        <p class="item-title">Academic Projects - Student / Fresher</p>
-        <p class="item-sub">Year II (2024 - Present)</p>
-        <ul>
-            <li><strong>Work company DigitalDividedata-cambodia | 1Month </strong></li>
-            <li><strong>Project Java:</strong> Restaurant Management System | Developed using Java and MySQL.</li>
-            <li><strong>Project Computer Architecture:</strong> Built Radio-Controlled Car and Smart Traffic Light System.</li>
-            <li>Passionate about software development, web technologies, and database management[cite: 1].</li>
-            <li>Continuously improving programming skills through academic projects and self-learning[cite: 1].</li>
+        <div class="item-header">
+            <p class="item-title">Academic & Practical Experience</p>
+            <span class="item-date">2024 – Present</span>
+        </div>
+        <p class="item-sub">Year II Computer Science Student</p>
+        
+        <ul class="cv-list">
+            <li><strong>Digital Data Divide Cambodia:</strong> Completed a 1-month intensive work experience program focusing on data management and workflow precision.</li>
+            <li><strong>Restaurant Management System:</strong> Developed a desktop application using Java and MySQL to manage orders, menu items, and sales records.</li>
+            <li><strong>Hardware Logic Project:</strong> Designed and built a Radio-Controlled (RC) Car and an automated Smart Traffic Light System for Computer Architecture coursework.</li>
         </ul>
-        <p style="font-size: 13px; color: #555;"><strong>Skills Used:</strong> HTML, CSS, C, C++, Hardware & Systems Logic[cite: 1].</p>
+        <div class="tech-stack">
+            <strong>Technologies Used:</strong> C, C++, Java, MySQL, HTML/CSS, Hardware & Systems Logic
+        </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        Copyright © 2026 by SOUNG KIMLENG. All rights reserved.
+        © 2026 SOUNG KIMLENG • Designed for Web & Print
     </footer>
 </div>
 
